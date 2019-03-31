@@ -91,3 +91,10 @@ export function getLogBySelfProject(data) {
     return $http.post('project/project/getLogBySelfProject', data);
 }
 
+export function taskStatInfos() {
+    return $http.post('project/task/taskStatInfos'); 
+}
+
+export function overdueCount() {
+    return $http.post('project/task/overdueCount');
+}

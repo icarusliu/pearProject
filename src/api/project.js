@@ -7,6 +7,10 @@ export function selfList(data) {
     return $http.post('project/project/selfList', data);
 }
 
+export function stat(data) {
+    return $http.post('project/project/stat', data)
+}
+
 export function doData(data) {
     let url = 'project/project/save';
     if (data.projectCode) {
