@@ -300,8 +300,8 @@
                     app.projectData.selfCount = res.data.count
                     app.projectData.selfList = res.data.list
                     
-                    if (res.data.countByMonth.length) {
-                        projectList.splice(0, projectList.length)
+                    projectList.splice(0, projectList.length)
+                    if (res.data.countByMonth.length) {                        
                         let nowDate = new Date()
                         let nowYear = nowDate.getFullYear()
                         let nowMonth = nowDate.getMonth() + 1
@@ -334,8 +334,8 @@
 
                 // 获取任务统计清单
                 taskStatInfos().then(res => {
+                    taskList.splice(0, taskList.length)
                     if (res.data.taskStatList.length) {
-                        taskList.splice(0, taskList.length)
                         res.data.taskStatList.forEach(item =>{
                             taskList.push({
                                 "日期": item.month + "月" + item.day + "日", 
